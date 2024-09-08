@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Result Management System</h1>
+
+        <!-- Login Section -->
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="register-link">Register here</a></p>
+        </div>
+
+        <!-- Registration Section -->
+        <div id="register-section" class="hidden">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="new-student-id"> Student ID:</label>
+                <input type="text" id="new-student-id" required><br>
+                <label for="new-password"> Password:</label>
+                <input type="password" id="new-password" required><br>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="login-link">Login here</a></p>
+        </div>
+
+        <!-- Student Dashboard -->
+        <div id="dashboard-section" class="hidden">
+            <h2>Welcome. <span id="student-name"></span></h2>
+            <button id="logout-btn">Logout</button>
+            <h3>Your Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="result-table"></tbody>
+            </table>
+        </div>
+
+        <!-- Admin Section -->
+        <div id="admin-section" class="hidden">
+            <h2>Admin Dashboard</h2>
+            <button id="admin-logout-btn">Logout</button>
+
+            <h3>Add Result</h3>
+            <form id="add-result-form">
+                <label for="result-student-id">
+                    Student ID:
+                </label>
+                <input type="text" id="result-student-id" required><br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" required><br>
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" required><br>
+                <button type="submit">Add Result</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
